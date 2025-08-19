@@ -15,16 +15,16 @@ const Hero = () => {
   ];
 
   return (
-    <div className="p-10 ">
-      <div className="h-230 w-80   backdrop-blur-2xl pt-5 border-gray-200 border-2 rounded-2xl">
-        <p className=" pt-5 font-sans text-center text-gray-300 text-4xl">
+    <div className="p-10  cw-1/5  ">
+      <div className="h-[91vh] w-80  bg-white/2  backdrop-blur-8xl pt-5 border-gray-800 border rounded-2xl">
+        <h2 className=" mask-b-from-60% pt-5 font- text-center text-gray-300 text-3xl">
           WeatherWise
-        </p>
+        </h2>
 
-        <div className="h-58 w-70 mt-15 m-5  bg-black/3 backdrop-blur-2xl pt-5  rounded-2xl">
-          <p className="mask-b-from-neutral-200  pt-5 font-sans   text-gray-100 text-xl">
+        <div className="h-58 w-70 mt-6 m-5    pt-5  rounded-2xl">
+          <h2 className="mask-b-from-60%  pt-5 font-sans   text-gray-100 text-xl">
             Status
-          </p>
+          </h2>
           <TemperatureGraph
             data={sampleData}
             pointerIndex={3} // will show "Dangerous" on Thursday
@@ -33,14 +33,14 @@ const Hero = () => {
           />
         </div>
 
-        <div className="h-58 w-70 mt-25 m-5  bg-black/3 backdrop-blur-2xl pt-5  rounded-2xl">
-          <p className="mask-b-from-neutral-200  pt-5 font-sans   text-gray-100 text-xl">
+        <div className="h-58 w-70 mt-30 m-5  pt-5  rounded-2xl">
+          <h2 className="mask-b-from-60% pt-5 font-sans   text-gray-100 text-xl">
             Area
-          </p>
+          </h2>
           <GlobeCircle />
-          <p className=" text-center mt-15 font-sans p-5   bg-black/30 backdrop-blur-2xl   rounded-2xl  text-gray-300 text-xl">
+          <h2 className=" text-center mt-15 font-sans p-4   bg-black/20 backdrop-blur-2xl   rounded-3xl  text-gray-300 text-xl">
             Karachi
-          </p>
+          </h2>
         </div>
       </div>
     </div>

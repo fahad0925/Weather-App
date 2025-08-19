@@ -7,7 +7,7 @@ import MainPage from "./components/MainPage";
 const page = () => {
   const [img, setImg] = useState("");
   return (
-    <div>
+    <div className="flex w-full h-screen">
       {img && (
         <img
           className="h-full absolute -z-10 w-full object-cover"
