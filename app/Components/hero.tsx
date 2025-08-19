@@ -16,12 +16,12 @@ const Hero = () => {
 
   return (
     <div className="p-10  cw-1/5  ">
-      <div className="h-[91vh] w-80  bg-white/2  backdrop-blur-8xl pt-5 border-gray-800 border rounded-2xl">
-        <h2 className=" mask-b-from-60% pt-5 font- text-center text-gray-300 text-3xl">
+      <div className="h-[91vh] w-[31vh]  bg-white/2  backdrop-blur-8xl pt-5 border-gray-800 border rounded-2xl">
+        <h2 className=" mask-b-from-60% pt-6 font- text-center text-gray-300 text-3xl">
           WeatherWise
         </h2>
 
-        <div className="h-58 w-70 mt-6 m-5    pt-5  rounded-2xl">
+        <div className="h-58 w-70 mt-9 m-5    pt-6  rounded-2xl">
           <h2 className="mask-b-from-60%  pt-5 font-sans   text-gray-100 text-xl">
             Status
           </h2>
@@ -33,7 +33,7 @@ const Hero = () => {
           />
         </div>
 
-        <div className="h-58 w-70 mt-30 m-5  pt-5  rounded-2xl">
+        <div className="h-58 w-70 mt-32 m-5  pt-6  rounded-2xl">
           <h2 className="mask-b-from-60% pt-5 font-sans   text-gray-100 text-xl">
             Area
           </h2>
