@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { TemperatureGraph } from "../animations/TempSideBar";
-import GlobeCircle from "../animations/SideBarBottom";
+import { TemperatureGraph } from "./Hero Components/TempSideBar";
+import GlobeCircle from "./Hero Components/SideBarBottom";
 
 const Hero = () => {
   const sampleData = [
@@ -15,14 +15,14 @@ const Hero = () => {
   ];
 
   return (
-    <div className="p-10  cw-1/5  ">
-      <div className="h-[91vh] w-[31vh]  bg-white/2  backdrop-blur-8xl pt-5 border-gray-800 border rounded-2xl">
-        <h2 className=" mask-b-from-60% pt-6 font- text-center text-gray-300 text-3xl">
+    <div className="p-10  cw-1/5   ">
+      <div className="h-[91vh] w-[31vh] flex items-center flex-col  justify-evenly  bg-white/2  backdrop-blur-6xl border-gray-800 border rounded-2xl">
+        <h2 className=" mask-b-from-60%  text-center text-gray-300  lg:text-2xl xl:text-3xl  ">
           WeatherWise
         </h2>
 
-        <div className="h-58 w-70 mt-9 m-5    pt-6  rounded-2xl">
-          <h2 className="mask-b-from-60%  pt-5 font-sans   text-gray-100 text-xl">
+        <div className="w-full p-4 ">
+          <h2 className="mask-b-from-60% text-left pt-5 font-sans   text-gray-100 text-xl">
             Status
           </h2>
           <TemperatureGraph
@@ -33,12 +33,12 @@ const Hero = () => {
           />
         </div>
 
-        <div className="h-58 w-70 mt-32 m-5  pt-6  rounded-2xl">
-          <h2 className="mask-b-from-60% pt-5 font-sans   text-gray-100 text-xl">
+        <div className="w-full p-4">
+          <h2 className="mask-b-from-60% font-sans   text-gray-100 text-xl">
             Area
           </h2>
           <GlobeCircle />
-          <h2 className=" text-center mt-15 font-sans p-4   bg-black/20 backdrop-blur-2xl   rounded-3xl  text-gray-300 text-xl">
+          <h2 className=" text-center mt-15 m-4 font-sans p-4   bg-black/20 backdrop-blur-2xl   rounded-3xl  text-gray-300 text-xl">
             Karachi
           </h2>
         </div>

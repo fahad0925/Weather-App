@@ -76,11 +76,11 @@ const Weather = ({ setImg }: props) => {
 
     const imgSrc =
       condition === "sunny"
-        ? "sunny.jpg"
+        ? "Weather.png"
         : condition === "rainy"
-        ? "rainy.jpg"
+        ? "Weather.png"
         : condition === "smoke"
-        ? "normalWeather.jpg"
+        ? "Weather.png"
         : "Weather.png";
 
     setImg(imgSrc);

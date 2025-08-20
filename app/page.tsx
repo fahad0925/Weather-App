@@ -10,7 +10,7 @@ const page = () => {
     <div className="flex w-full h-screen ">
       {img && (
         <img
-          className="h-full absolute -z-10 w-full object-cover"
+          className="h-full absolute  -z-10 w-full object-cover"
           src={img}
           alt="yale"
         />
