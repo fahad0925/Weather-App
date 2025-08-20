@@ -15,7 +15,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="p-10  cw-1/5   ">
+    <div className="p-10  w-1/5   ">
       <div className="h-[91vh] w-[31vh] flex items-center flex-col  justify-evenly  bg-white/2  backdrop-blur-6xl border-gray-800 border rounded-2xl">
         <h2 className=" mask-b-from-60%  text-center text-gray-300  lg:text-2xl xl:text-3xl  ">
           WeatherWise

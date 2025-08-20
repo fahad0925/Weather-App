@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaLocationArrow } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaCloudBolt } from "react-icons/fa6";
+import WeatherGraph from "./Main page comp/DaysGraph";
 
+// You can fully control these values here
+const data = [
+  { day: "Mon", temp: 22 },
+  { day: "Tue", temp: 28 },
+  { day: "Wed", temp: 25 },
+  { day: "Thu", temp: 30 },
+  { day: "Fri", temp: 27 },
+  { day: "Sat", temp: 20 },
+  { day: "Sun", temp: 24 },
+];
 const MainPage = () => {
   return (
-    <div className="w-4/5 pt-10">
+    <div className="w-4/5 pt-10 pr-10">
       <div className="flex items-center border   border-gray-700 rounded-3xl">
         <input
           className="w-full px-4 py-2   ml-7 bg-transparent text-gray-100 text-xl  focus:outline-none"
@@ -21,7 +32,7 @@ const MainPage = () => {
         </h1>
       </div>
       {/* temperatures */}
-      <div className="flex justify-between mt-[3%] pr-[4%]">
+      <div className="flex justify-between mt-[3%] ">
         <div className="flex gap-6 ">
           <h1 className="mask-b-from-1%  text-center text-gray-300 text-3xl lg:text-6xl xl:text-8xl  ">
             18º
@@ -48,7 +59,7 @@ const MainPage = () => {
 
       {/* heading */}
 
-      <div className="flex mt-[6%] justify-between pr-[4%]">
+      <div className="flex mt-[6%] justify-between ">
         {/* heading-1*/}
         <div>
           <h1 className="text-7xl bg-gradient-to-r from-white/60 to-gray-700 bg-clip-text text-transparent  ">
@@ -63,27 +74,27 @@ const MainPage = () => {
           </h1>
 
           {/* boxes */}
-          <div className="flex gap-3">
+          <div className="flex gap-5">
             {/* first box */}
-            <div className=" bg-white/4 backdrop-blur-6xl border border-gray-900 px-15 py-10 rounded-3xl">
-              <div className="flex gap-10">
+            <div className=" bg-white/4 backdrop-blur-6xl border border-gray-600 h-[17vh] w-[20vh] rounded-3xl p-5 flex flex-col justify-evenly">
+              <div className="flex justify-between ">
                 {" "}
                 <FaCloudBolt className="text-5xl " />
-                <h1 className="mask-b-from-1% text-gray-300">16º</h1>
+                <h1 className="mask-b-from-1% text-gray-300 text-6xl">16º</h1>
               </div>
-              <div>
+              <div className="">
                 <h1 className="mask-b-from-1% text-gray-300">karachi, PK</h1>
                 <h1 className="mask-b-from-1% text-gray-300">cloudy</h1>
               </div>
             </div>
             {/* second box */}
-            <div className="bg-white/4 backdrop-blur-6xl border border-gray-900 px-15 py-10 rounded-3xl">
-              <div className="flex">
+            <div className=" bg-white/4 backdrop-blur-6xl border border-gray-600 h-[17vh] w-[20vh] rounded-3xl p-5 flex flex-col justify-evenly">
+              <div className="flex justify-between ">
                 {" "}
-                <FaCloudBolt className="text-2xl " />
-                <h1 className="mask-b-from-1% text-gray-300">16º</h1>
+                <FaCloudBolt className="text-5xl " />
+                <h1 className="mask-b-from-1% text-gray-300 text-6xl">16º</h1>
               </div>
-              <div>
+              <div className="">
                 <h1 className="mask-b-from-1% text-gray-300">karachi, PK</h1>
                 <h1 className="mask-b-from-1% text-gray-300">cloudy</h1>
               </div>
@@ -93,6 +104,14 @@ const MainPage = () => {
 
         {/* heading end */}
       </div>
+
+      {/* last-days weather */}
+
+      <div className="mt-[7vh]">
+        <WeatherGraph data={data} />
+      </div>
+
+      {/* siraf yahi main hai */}
     </div>
   );
 };
