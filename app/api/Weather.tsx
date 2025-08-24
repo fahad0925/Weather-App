@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { useWeatherCity } from "./WeatherContext";
 type WeatherApiResponse = {
   current_condition: {
     FeelsLikeC: string;
@@ -10,7 +11,9 @@ type WeatherApiResponse = {
     precipMM: string;
     pressure: string;
     temp_C: string;
+    tempC?: string; // ✅ added
     temp_F: string;
+    tempF?: string; // optional alias
     uvIndex: number;
     visibility: string;
     weatherCode: string;
@@ -21,6 +24,17 @@ type WeatherApiResponse = {
     windspeedKmph: string;
     windspeedMiles: string;
   }[];
+
+  nearest_area: {
+    areaName: { value: string }[];
+    country: { value: string }[];
+    region: { value: string }[];
+    latitude: string;
+    longitude: string;
+    population: string;
+    weatherUrl: { value: string }[];
+  }[];
+
   weather: {
     date: string;
     maxtempC: string;
@@ -33,7 +47,9 @@ type WeatherApiResponse = {
       precipMM: string;
       pressure: string;
       temp_C: string;
+      tempC?: string; // ✅ added
       temp_F: string;
+      tempF?: string; // optional alias
       time: string;
       uvIndex: number;
       visibility: string;
@@ -46,52 +62,54 @@ type WeatherApiResponse = {
       windspeedMiles: string;
     }[];
   }[];
-};
-interface props {
-  setImg: any;
-}
 
-const Weather = ({ setImg }: props) => {
-  let [location, setLocation] = useState("Islamabad");
-  let [weather, setWeather] = useState<WeatherApiResponse>();
-  let api = `https://wttr.in/${location}?format=j1`;
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(api);
-        const data = await response.json();
-        setWeather(data);
-      } catch {
-        console.error("Error Fetching data");
-      }
-    };
-    fetchData();
-  }, [setImg]);
-
-  useEffect(() => {
-    if (!weather) return;
-
-    const condition =
-      weather.current_condition[0].weatherDesc[0].value.toLowerCase();
-
-    const imgSrc =
-      condition === "sunny"
-        ? "Weather.png"
-        : condition === "rainy"
-        ? "Weather.png"
-        : condition === "smoke"
-        ? "Weather.png"
-        : "Weather.png";
-
-    setImg(imgSrc);
-  }, [weather, setImg]);
-
-  return (
-    <div>
-      {/* <h1>Current Temp: {weather?.current_condition[0]?.temp_C}°</h1>
-      <p>{weather?.current_condition[0].weatherDesc[0].value}</p> */}
-    </div>
-  );
+  ClimateAverages: {
+    month: {
+      index: string;
+      name: string;
+      avgMinTemp: string;
+      avgMinTemp_F: string;
+      absMaxTemp: string;
+      absMaxTemp_F: string;
+      avgDailyRainfall: string;
+    }[];
+  }[];
 };
 
-export default Weather;
+export const useWeather = () => {
+  const { city } = useWeatherCity(); // bag se city li
+  return useQuery<WeatherApiResponse>({
+    queryKey: ["weather", city],
+    queryFn: async () => {
+      const response = await fetch(`https://wttr.in/${city}?format=j1`);
+      return response.json();
+    },
+  });
+};
+// let [location, setLocation] = useState("Islamabad");
+
+//   useEffect(() => {
+//     if (!weather) return;
+
+//     const condition =
+//       weather.current_condition[0].weatherDesc[0].value.toLowerCase();
+
+//     const imgSrc =
+//       condition === "sunny"
+//         ? "Weather.png"
+//         : condition === "rainy"
+//         ? "Weather.png"
+//         : condition === "smoke"
+//         ? "Weather.png"
+//         : "Weather.png";
+
+//     setImg(imgSrc);
+//   }, [weather, setImg]);
+
+//   return (
+//     <div>
+//       {/* <h1>Current Temp: {weather?.current_condition[0]?.temp_C}°</h1>
+//       <p>{weather?.current_condition[0].weatherDesc[0].value}</p> */}
+//     </div>
+//   );
+// };
