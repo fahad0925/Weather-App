@@ -13,11 +13,7 @@ const Page = () => {
   if (isLoading) return <Loading />;
 
   return (
-    <div
-      className="relative w-full min-h-screen flex  flex-col-reverse sm:flex-row "
-      // className="flex w-full min-h-screen  flex-col-reverse sm:flex-row bg-cover bg-center bg-no-repeat"
-      // style={{ backgroundImage: "url('Weather.png')" }}
-    >
+    <div className="relative w-full min-h-screen flex  flex-col-reverse sm:flex-row ">
       <WeatherBackground />
 
       <Hero />
