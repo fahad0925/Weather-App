@@ -81,7 +81,7 @@ const MainPage = () => {
           <p className="mask-b-from-60% font-sans   text-gray-300 ">
             {" "}
             With real time data and advanced technology, we provide reliable
-            forcast for any location around the world.{" "}
+            forcast for any location around the world{" "}
           </p>
         </div>
       </div>
