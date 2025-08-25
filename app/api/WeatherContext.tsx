@@ -10,7 +10,7 @@ export const WeatherProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [city, setCity] = useState("Karachi"); // default Karachi hai
+  const [city, setCity] = useState("california"); // default Karachi hai
 
   return (
     <WeatherContext.Provider value={{ city, setCity }}>

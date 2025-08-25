@@ -77,7 +77,7 @@ type WeatherApiResponse = {
 };
 
 export const useWeather = () => {
-  const { city } = useWeatherCity(); // bag se city li
+  const { city } = useWeatherCity();
   return useQuery<WeatherApiResponse>({
     queryKey: ["weather", city],
     queryFn: async () => {

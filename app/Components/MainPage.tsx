@@ -31,9 +31,8 @@ const MainPage = () => {
       setInputValue("");
     }
   };
-  if (isLoading) return <Loading />;
   return (
-    <div className=" sm:w-3.5/5 md:w-4/5 p-2 pt-3 pr-3 xl:pt-10 lg:pr-10">
+    <div className=" sm:w-5/5 lg:w-4/5 p-2 pt-3 pr-3 xl:pt-10 lg:pr-10">
       <div className="flex items-center border   border-gray-700  w-[100$] sm:w-[97%] rounded-3xl">
         <form
           onSubmit={handleSubmit}
@@ -108,7 +107,7 @@ const MainPage = () => {
           {/* boxes */}
           <div className="flex gap-[2vh]">
             {/* first box */}
-            <div className=" bg-white/4 backdrop-blur-6xl border border-gray-600 h-[17vh] w-[20vh] rounded-3xl p-[2vh] flex flex-col justify-evenly">
+            <div className=" bg-black/5 backdrop-blur-4xl border border-gray-600 h-[17vh] w-[20vh] rounded-3xl p-[2vh] flex flex-col justify-evenly">
               <div className="flex justify-between ">
                 {" "}
                 <FaCloudBolt className="text-3xl  sm:text-4xl 2xl:text-5xl " />
@@ -126,7 +125,7 @@ const MainPage = () => {
               </div>
             </div>
             {/* second box */}
-            <div className=" bg-white/4 backdrop-blur-6xl border border-gray-600 h-[17vh] w-[20vh] rounded-3xl  p-[2vh] flex flex-col justify-evenly">
+            <div className="bg-black/5 backdrop-blur-4xl border border-gray-600 h-[17vh] w-[20vh] rounded-3xl  p-[2vh] flex flex-col justify-evenly">
               <div className="flex justify-between ">
                 {" "}
                 <FaCloudBolt className=" text-3xl  sm:text-4xl 2xl:text-5xl " />
@@ -153,7 +152,7 @@ const MainPage = () => {
       <div className=" flex  flex-col sm:flex-row gap-2  xl:gap-4 mb-[5vh] mt-[3vh] lg:-mt-[3vh]">
         <button
           onClick={() => setTemp(0)}
-          className=" px-6 py-3 rounded-3xl text-white/80font-medium backdrop-blur-md bg-gradient-to-r from-white/10 via-gray-900/60 to-black/10 border border-gray-400/40 shadow-[0_0_25px_rgba(255,255,255,0.2)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:scale-[1.03] transition duration-200"
+          className=" px-9 py-3 rounded-3xl text-white/80font-medium backdrop-blur-md bg-gradient-to-r from-white/10 via-gray-900/60 to-black/10 border border-gray-400/40 shadow-[0_0_25px_rgba(255,255,255,0.2)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:scale-[1.03] transition duration-200"
         >
           Today
         </button>
