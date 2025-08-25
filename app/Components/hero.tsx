@@ -3,10 +3,9 @@ import React, { useState } from "react";
 import { TemperatureGraph } from "./Hero Components/TempSideBar";
 import GlobeCircle from "./Hero Components/SideBarBottom";
 import { useWeather } from "../api/Weather";
-import Loading from "./Loading/Loading";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 const Hero = () => {
-  const { data, isLoading } = useWeather();
+  const { data } = useWeather();
   const sampleData = [
     { name: "Mon", value: 22 },
     { name: "Tue", value: 28 },

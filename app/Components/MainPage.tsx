@@ -4,9 +4,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { FaCloudBolt } from "react-icons/fa6";
 import WeatherGraph from "./Main page comp/DaysGraph";
 import { useWeather } from "../api/Weather";
-import { p } from "framer-motion/client";
 import { useWeatherCity } from "../api/WeatherContext";
-import Loading from "./Loading/Loading";
 
 // You can fully control these values here
 
@@ -15,7 +13,7 @@ const MainPage = () => {
   const [temp, setTemp] = useState(0);
 
   const { setCity } = useWeatherCity();
-  const { data: location, isLoading, error } = useWeather();
+  const { data: location } = useWeather();
   const timeLabels = ["12AM", "3AM", "6AM", "9AM", "12PM", "3PM", "6PM", "9PM"];
 
   const data = timeLabels.map((label, i) => ({

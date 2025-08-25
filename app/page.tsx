@@ -1,7 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
-import { useWeather } from "./api/Weather";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Page from "./All Components/ProperAllThings";
 import { WeatherProvider } from "./api/WeatherContext";

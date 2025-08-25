@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Hero from "../components/Hero";
 import MainPage from "../components/MainPage";
 import { useWeather } from "../api/Weather";
@@ -7,7 +7,7 @@ import WeatherBackground from "./Background";
 import Loading from "../components/Loading/Loading";
 
 const Page = () => {
-  const { data, isLoading } = useWeather();
+  const { isLoading } = useWeather();
 
   if (isLoading) return <Loading />;
 
