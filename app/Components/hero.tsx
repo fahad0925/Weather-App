@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { TemperatureGraph } from "./Hero Components/TempSideBar";
-import GlobeCircle from "./Hero Components/SideBarBottom";
+import { TemperatureGraph } from "./hero-components/TempSideBar";
+import GlobeCircle from "./hero-components/SideBarBottom";
 import { useWeather } from "../api/Weather";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 const Hero = () => {

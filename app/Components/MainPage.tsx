@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaLocationArrow } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaCloudBolt } from "react-icons/fa6";
-import WeatherGraph from "./Main page comp/DaysGraph";
+import WeatherGraph from "./main-page-comp/DaysGraph";
 import { useWeather } from "../api/Weather";
 import { useWeatherCity } from "../api/WeatherContext";
 
