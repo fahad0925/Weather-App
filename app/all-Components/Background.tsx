@@ -18,7 +18,7 @@ const getVideoSource = (condition: string | undefined) => {
   )
     return "light.mp4";
 
-  return "light.mp4";
+  return "snow.mp4";
 };
 
 const WeatherBackground = () => {
