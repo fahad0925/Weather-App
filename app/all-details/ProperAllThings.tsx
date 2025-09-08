@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 
-import Hero from "../components/Hero";
 import MainPage from "../components/MainPage";
 import Loading from "../components/Loading/Loading";
 
 import { useWeather } from "../api/Weather";
 
 import WeatherBackground from "./Background";
+import HeroSection from "../components/HeroSection";
 
 const Page = () => {
   const { isLoading } = useWeather();
@@ -18,7 +18,7 @@ const Page = () => {
     <div className="relative w-full min-h-screen flex  flex-col-reverse sm:flex-row ">
       <WeatherBackground />
 
-      <Hero />
+      <HeroSection />
       <MainPage />
     </div>
   );
