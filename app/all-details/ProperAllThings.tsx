@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
+
 import Hero from "../components/Hero";
 import MainPage from "../components/MainPage";
+import Loading from "../components/Loading/Loading";
+
 import { useWeather } from "../api/Weather";
 
-import Loading from "../components/loading/Loading";
 import WeatherBackground from "./Background";
 
 const Page = () => {
