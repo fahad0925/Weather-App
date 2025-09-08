@@ -8,7 +8,7 @@ import { useWeatherCity } from "../api/WeatherContext";
 
 // You can fully control these values here
 
-const MainPage = () => {
+const mainPage = () => {
   const [inputValue, setInputValue] = useState("");
   const [temp, setTemp] = useState(0);
 
@@ -177,4 +177,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default mainPage;

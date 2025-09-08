@@ -4,7 +4,7 @@ import { TemperatureGraph } from "./hero-components/TempSideBar";
 import GlobeCircle from "./hero-components/SideBarBottom";
 import { useWeather } from "../api/Weather";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-const Hero = () => {
+const hero = () => {
   const { data } = useWeather();
   const sampleData = [
     { name: "Mon", value: 22 },
@@ -76,4 +76,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default hero;
